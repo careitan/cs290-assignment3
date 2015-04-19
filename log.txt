@@ -1,3 +1,5 @@
 Your log goes in this  file.
 
+git log --pretty=format:"Start:%nEnd: %ad %nTasks: %s" --date=rfc
+
 

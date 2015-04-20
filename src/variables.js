@@ -44,9 +44,16 @@ return true if b is a primitive string value (also known as a string literal),
 false otherwise
 */
 function isString(b) {
-  //your code here
-  return undefined;
-  //end your code
+  var varIsString = true;
+
+  if (typeof b=="string") {
+    varIsString = true;
+  }
+  else {
+    varIsString = false;
+  }
+
+  return varIsString;
 }
 
 /*
@@ -57,7 +64,11 @@ Output:
 return true if c is null, false otherwise
 */
 function isNull(c) {
-  //your code here
-  return undefined;
-  //end your code
+  var varIsNull = true;
+
+  if (c!==null) {
+    varIsNull = false;
+  };
+
+  return varIsNull;
 }

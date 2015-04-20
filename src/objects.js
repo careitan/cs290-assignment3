@@ -86,7 +86,7 @@ MessageLog.prototype.lastReceivedMessage = function () {
       this.received[this.received.length];
     };
   }
-};
+}
 //end your code
 
 /**

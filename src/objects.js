@@ -63,9 +63,8 @@ function MessageLog(user) {
 
   this.getSentMessage = function (n) {
     if (typeof n === 'number' && (n >= 0) && (n <= this.sent.length)) {
-      return {
-        this.sent[this.sent.length - 1 - n];
-      };
+      var messageText = this.received[this.sent.length];
+      return messageText;
     }
   };
 
@@ -82,9 +81,8 @@ function MessageLog(user) {
 MessageLog.prototype.lastReceivedMessage = function () {
   'use strict';
   if (this.received.length >= 1) {
-    return {
-      this.received[this.received.length];
-    };
+    var messageText = this.received[this.received.length];
+    return messageText;
   }
 };
 //end your code
@@ -97,7 +95,7 @@ MessageLog.prototype.lastReceivedMessage = function () {
 
 //your code here
 var myLog = new MessageLog("BlackHatGuy");
-MessageLog.logMessage("foo", 1);
-MessageLog.logMessage("bar", 1);
-MessageLog.logMessage("baz", 1);
+myLog.logMessage("foo", 1);
+myLog.logMessage("bar", 1);
+myLog.logMessage("baz", 1);
 //end your code

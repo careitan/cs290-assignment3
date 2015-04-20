@@ -10,25 +10,23 @@ in input `a`
 a: the original a number
 */
 function variableModification(a) {
-  var plus5;
-  var asString;
-  var yourNumberIs;
+  'use strict';
+  var plus5, asString, yourNumberIs, numValue;
   //your code here
-  var numValue;
   /* create the numeric output value 
   code samples found in article: http://javascript.about.com/library/blstrnum.htm
   */
   plus5 = 0; /* forces variable to be number */
-   
-  if (typeof a == "number") {
-    numValue = parseInt(a,10);
+
+  if (typeof a === "number") {
+    numValue = parseInt(a, 10);
     plus5 = numValue + 5;
-  };
+  }
   /* String converstion */
   asString = String(a);
 
   /* String concantenation */
-  yourNumberIs = "Your Number is '".asString."'.";
+  yourNumberIs = ["Your Number is '", asString, "'."].join("");
 
   //end your code
   return [plus5, asString, yourNumberIs, a];
@@ -43,12 +41,12 @@ return true if b is a primitive string value (also known as a string literal),
 false otherwise
 */
 function isString(b) {
+  'use strict';
   var varIsString = true;
 
-  if (typeof b=="string") {
+  if (typeof b === "string") {
     varIsString = true;
-  }
-  else {
+  } else {
     varIsString = false;
   }
 
@@ -63,11 +61,12 @@ Output:
 return true if c is null, false otherwise
 */
 function isNull(c) {
+  'use strict';
   var varIsNull = true;
 
-  if (c!==null || typeof c =="undefined") {
+  if (c !== null || c === "undefined") {
     varIsNull = false;
-  };
+  }
 
   return varIsNull;
 }

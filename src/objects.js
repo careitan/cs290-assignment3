@@ -42,8 +42,8 @@ function returnObjectLiteral() {
 function MessageLog(user) {
   'use strict';
   this.user = user;
-  this.received = Array[0];
-  this.sent = Array[0];
+  this.received = new Array(0);
+  this.sent = new Array(0);
 
   this.logMessage = function (messageText, direction) {
     if (direction === 0) {

@@ -67,9 +67,10 @@ bar = function doubleArray(inputArray) {
 * @property {string} message - the commit message
 */
 function GitLog(hash, date, message) {
-    this.hash = hash;
-    this.date = date;
-    this.message = message;
+  'use strict';
+  this.hash = hash;
+  this.date = date;
+  this.message = message;
 }
 /**
 * Create a function called parseGit to parse Git commit logs
@@ -94,6 +95,7 @@ function GitLog(hash, date, message) {
 function parseGit(gitArray) {
   'use strict';
   var tempArray, tempValue, tempValue1, tempValue2, tempValue3, i;
+
   tempArray = new Array(gitArray.length);
 
   for (i = 0; i < gitArray.length; i++) {
@@ -106,7 +108,9 @@ function parseGit(gitArray) {
     tempValue3 = gitArray[i].substr(gitArray[i].indexOf('"') + 1,
       gitArray[i].length - gitArray[i].indexOf('"') + 1);
 
-    tempArray[i] = function GitLog(tempValue1, tempValue2, tempValue3);
+    tempValue = GitLog(tempValue1, tempValue2, tempValue3);
+
+    tempArray[i] = tempValue;
   }
 
   return tempArray;

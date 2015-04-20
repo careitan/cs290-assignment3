@@ -10,6 +10,7 @@
 
 function returnObjectLiteral() {
   //your code here
+  'use strict';
   return {"brand": "Pepperidge Farm", "count": 2000, "flavor": "Cheddar", "type": "Goldfish"};
   //end your code
 }
@@ -38,8 +39,35 @@ function returnObjectLiteral() {
 */
 
 //your code here
-function MessageLog (user) {
-  return
+function MessageLog(user) {
+  'use strict';
+  this.user = user;
+  this.received = Array[0];
+  this.sent = Array[0];
+
+  this.logMessage = function (messageText, direction) {
+    if (direction === 0) {
+      this.sent.push(messageText);
+    } else if (direction === 1) {
+      this.received.push(messageText);
+    }
+  };
+
+  this.totalSent = function () {
+    return this.sent.length;
+  };
+
+  this.totalReceived = function () {
+    return this.received.length;
+  };
+
+  this.getSentMessage = function (n) {
+    if (typeof n === 'number' && (n >= 0) && (n <= this.sent.length)) {
+      return {
+        message: this.sent[this.sent.length - n]
+      };
+    }
+  };
 }
 //end your code
 
@@ -49,7 +77,14 @@ function MessageLog (user) {
 * received.
 */
 //your code here
-
+MessageLog.prototype.lastReceivedMessage = function () {
+  'use strict';
+  if (this.received.length >= 1) {
+    return {
+      message: this.received[this.received.length]
+    };
+  }
+};
 //end your code
 
 /**
@@ -59,5 +94,8 @@ function MessageLog (user) {
 */
 
 //your code here
-
+var aMessage = new MessageLog("BlackHatGuy");
+MessageLog.logMessage("foo", 1);
+MessageLog.logMessage("bar", 1);
+MessageLog.logMessage("baz", 1);
 //end your code

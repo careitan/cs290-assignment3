@@ -64,7 +64,7 @@ function MessageLog(user) {
   this.getSentMessage = function (n) {
     if (typeof n === 'number' && (n >= 0) && (n <= this.sent.length)) {
       return {
-        this.sent[this.sent.length - 1 - n]
+        this.sent[this.sent.length - 1 - n];
       };
     }
   };
@@ -83,7 +83,7 @@ MessageLog.prototype.lastReceivedMessage = function () {
   'use strict';
   if (this.received.length >= 1) {
     return {
-      this.received[this.received.length]
+      this.received[this.received.length];
     };
   }
 };

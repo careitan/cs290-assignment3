@@ -11,9 +11,9 @@
 function returnObjectLiteral() {
   //your code here
   'use strict';
-  return {"brand": "Pepperidge Farm", "count": 2000, "flavor": "Cheddar", "type": "Goldfish"};
+  return {'type':'Goldfish','brand':'Pepperidge Farm','flavor':'Cheddar','count':2000};
   //end your code
-}
+};
 
 /**
 * Create a constructor function for a `MessageLog` object.

@@ -10,7 +10,7 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  return {"brand": "Pepperidge Farm", "count": 2000, "flavor": "Cheddar", "type": "Goldfish"};
   //end your code
 }
 
@@ -38,7 +38,9 @@ function returnObjectLiteral() {
 */
 
 //your code here
-
+function MessageLog (user) {
+  return
+}
 //end your code
 
 /**

@@ -102,7 +102,7 @@ function parseGit(gitArray) {
 
     tempValue1 = gitArray[i].substring(0, gitArray[i].indexOf(' '));
 
-    tempValue2 = gitArray[i].substr(gitArray[i].indexOf(' ') - 1,
+    tempValue2 = gitArray[i].substr(gitArray[i].indexOf(' ') - 2,
       gitArray[i].indexOf('\"') - 1 - gitArray[i].indexOf(' ') - 1);
 
     tempValue3 = gitArray[i].substr(gitArray[i].indexOf('\"') + 2,

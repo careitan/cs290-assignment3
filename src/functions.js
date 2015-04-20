@@ -15,7 +15,7 @@
 //your code here
 function uselessFunction() {
   'use strict';
-  return {null};
+  return {'useless': null};
 }
 //end your code
 

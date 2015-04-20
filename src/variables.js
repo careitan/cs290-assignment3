@@ -19,12 +19,11 @@ function variableModification(a) {
   code samples found in article: http://javascript.about.com/library/blstrnum.htm
   */
   plus5 = 0; /* forces variable to be number */
-  numValue = parseInt(a,10); 
-  if (numValue != a) alert('not a number')
-    else
-      {
-        plus5 = numValue + 5;
-      };
+   
+  if (typeof a == "number") {
+    numValue = parseInt(a,10);
+    plus5 = numValue + 5;
+  };
   /* String converstion */
   asString = String(a);
 

@@ -26,7 +26,7 @@ function variableModification(a) {
   asString = String(a);
 
   /* String concantenation */
-  yourNumberIs = ["Your Number is '", asString, "'."].join("");
+  yourNumberIs = ["Your Number is ", asString].join("");
 
   //end your code
   return [plus5, asString, yourNumberIs, a];

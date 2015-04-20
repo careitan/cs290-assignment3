@@ -15,7 +15,7 @@
 //your code here
 function uselessFunction() {
   'use strict';
-  return {'useless': null};
+  return null;
 }
 //end your code
 
@@ -106,7 +106,7 @@ function parseGit(gitArray) {
     tempValue3 = gitArray[i].substr(gitArray[i].indexOf('"') + 1,
       gitArray[i].length - gitArray[i].indexOf('"') + 1);
 
-    tempArray[i] = GitLog(tempValue1, tempValue2, tempValue3);
+    tempArray[i] = function GitLog(tempValue1, tempValue2, tempValue3);
   }
 
   return tempArray;

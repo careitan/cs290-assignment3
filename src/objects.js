@@ -68,6 +68,8 @@ function MessageLog(user) {
       };
     }
   };
+
+  return;
 }
 //end your code
 

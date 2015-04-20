@@ -65,7 +65,7 @@ return true if c is null, false otherwise
 function isNull(c) {
   var varIsNull = true;
 
-  if (c!==null) {
+  if (c!==null || typeof c =="undefined") {
     varIsNull = false;
   };
 

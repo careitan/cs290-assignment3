@@ -63,7 +63,7 @@ function MessageLog(user) {
 
   this.getSentMessage = function (n) {
     if (typeof n === 'number' && (n >= 0) && (n <= this.sent.length)) {
-      var messageText = this.received[n];
+      var messageText = this.sent[n];
       return messageText;
     }
   };

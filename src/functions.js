@@ -106,7 +106,7 @@ function parseGit(gitArray) {
       gitArray[i].indexOf('\"') - gitArray[i].indexOf(' ')));
 
     tempValue3 = gitArray[i].substr(gitArray[i].indexOf('\"') + 1,
-      (gitArray[i].length - 1) - gitArray[i].indexOf('\"') + 1);
+      (gitArray[i].length - 1) - gitArray[i].indexOf('\"') + 2);
 
     tempValue = new GitLog(tempValue1, tempValue2, tempValue3);
 
